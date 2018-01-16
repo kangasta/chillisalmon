@@ -1,0 +1,5 @@
+.cs-footer {
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%,0);
+}

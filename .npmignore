@@ -1,0 +1,4 @@
+/public
+/src
+.eslint*
+.travis.yml
