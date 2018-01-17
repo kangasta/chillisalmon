@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './CSFooter.css';
+import '../style/CSFooter.css';
 
 class CSFooter extends Component {
 	render() {
