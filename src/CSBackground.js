@@ -5,24 +5,18 @@ import '../style/CSBackground.css';
 
 class CSBackground extends Component {
 	render() {
+		const { className, ...props } = this.props;
 		return (
-			<div className={'cs-background ' + this.props.className}>
-				{this.props.children}
-			</div>
+			<div className={'cs-background ' + className} {...props}/>
 		);
 	}
 }
 
 CSBackground.defaultProps = {
-	children: '',
 	className: ''
 };
 
 CSBackground.propTypes = {
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node
-	]),
 	className: PropTypes.string
 };
 

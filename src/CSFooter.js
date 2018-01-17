@@ -5,24 +5,18 @@ import '../style/CSFooter.css';
 
 class CSFooter extends Component {
 	render() {
+		const { className, ...props } = this.props;
 		return (
-			<div className={'cs-footer ' + this.props.className}>
-				{this.props.children}
-			</div>
+			<div className={'cs-footer ' + className} {...props}/>
 		);
 	}
 }
 
 CSFooter.defaultProps = {
-	children: '',
 	className: ''
 };
 
 CSFooter.propTypes = {
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node
-	]),
 	className: PropTypes.string
 };
 

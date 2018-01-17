@@ -1,5 +1,5 @@
 {
-  "name": "chilli-salmon",
+  "name": "chillisalmon",
   "version": "0.1.0",
   "private": true,
   "main": "build/ChilliSalmon.js",
@@ -7,6 +7,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
@@ -26,9 +27,9 @@
   },
   "scripts": {
     "build": "babel src -d build",
-	"build:watch": "babel src -w -d build",
+    "build:watch": "babel src -w -d build",
     "lint": "eslint src/",
-	"prepublish": "npm run build",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
