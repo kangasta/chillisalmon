@@ -1,7 +1,5 @@
 .cs-center-box {
 	left: 50%;
-	min-height: 20vh;
-	min-width: 80vh;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);

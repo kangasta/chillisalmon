@@ -1,0 +1,33 @@
+@media screen and (orientation:landscape) {
+	.cs-box-element {
+		font-size: 10vh;
+		min-height: 30vh;
+		width: 60vh;
+	}
+}
+
+@media screen and (orientation:portrait) {
+	.cs-box-element {
+		font-size: 10vw;
+		min-height: 30vw;
+		width: 60vw;
+	}
+}
+
+.cs-box-element-head {
+	font-size: 1.5em;
+	height: 1em;
+	margin: 0 0 .125em;
+}
+
+.cs-box-element-title {
+	font-size: 0.5em;
+	height: 1em;
+	margin: .375em 0;
+}
+
+.cs-box-element-content {
+	text-align: justify;
+	font-size: 0.25em;
+	margin: .75em 1em;
+}
