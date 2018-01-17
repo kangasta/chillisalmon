@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
+import CSDivWrapper from './CSDivWrapper';
 
 import '../style/CSFooter.css';
 
 class CSFooter extends Component {
 	render() {
-		const { className, ...props } = this.props;
 		return (
-			<div className={'cs-footer ' + className} {...props}/>
+			<CSDivWrapper addClassName='cs-footer ' {...this.props}/>
 		);
 	}
 }
-
-CSFooter.defaultProps = {
-	className: ''
-};
-
-CSFooter.propTypes = {
-	className: PropTypes.string
-};
 
 export default CSFooter;
