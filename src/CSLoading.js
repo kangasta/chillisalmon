@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import CSBoxElement from './CSBoxElement';
 
 import '../style/CSEffects.css';
-import '../style/CSLoading.css';
+import '../style/CSLoadingAndError.css';
 
 class CSLoading extends Component {
 	getLoadingSymbol() {

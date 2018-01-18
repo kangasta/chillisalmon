@@ -17,7 +17,7 @@
 .cs-box-element-head {
 	font-size: 1.5em;
 	height: 1em;
-	margin: .125em 0 0;
+	padding-top: .125em;
 	vertical-align: bottom;
 }
 
@@ -29,11 +29,12 @@
 .cs-box-element-title {
 	font-size: 0.5em;
 	height: 1em;
-	margin: .375em 0;
+	margin: .25em 0 .375em;
 }
 
 .cs-box-element-content {
 	text-align: justify;
 	font-size: 0.25em;
-	margin: .75em 1em;
+	margin: .75em 1em 0;
+	padding-bottom: .75em;
 }
