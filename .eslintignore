@@ -1,4 +1,2 @@
-src/registerServiceWorker.js
 build/
 coverage/
-lib/

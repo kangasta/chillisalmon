@@ -7,26 +7,31 @@ import '../style/CSBoxElement.css';
 
 class CSBoxElement extends Component {
 	render() {
+		const { addClassName, children, className, head, title, ...props } = this.props;
 		return (
-			<div className='cs-box-element ' {...this.props}>
-				<div className='cs-box-element-head'>{this.props.head}</div>
-				<div className='cs-box-element-title'>{this.props.title}</div>
-				<div className='cs-box-element-content'>{this.props.children}</div>
+			<div className={'cs-box-element ' + addClassName + ' ' + className} {...props}>
+				<div className='cs-box-element-head'>{head}</div>
+				<div className='cs-box-element-title'>{title}</div>
+				<div className='cs-box-element-content'>{children}</div>
 			</div>
 		);
 	}
 }
 
 CSBoxElement.defaultProps = {
+	addClassName: '',
+	children: '',
+	className: '',
 	head: '',
 	title: '',
-	children: ''
 };
 
 CSBoxElement.propTypes = {
+	addClassName: PropTypes.string,
+	children: PropTypes.node,
+	className: PropTypes.string,
 	head: PropTypes.node,
 	title: PropTypes.node,
-	children: PropTypes.node
 };
 
 export default CSBoxElement;
