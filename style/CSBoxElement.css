@@ -21,7 +21,14 @@
 	vertical-align: bottom;
 }
 
-.cs-box-element-head-symbol {
+.cs-box-element-head-symbol-fill {
+	fill: currentColor;
+	height: .875em;
+	stroke: transparent;
+}
+
+.cs-box-element-head-symbol-stroke {
+	fill: transparent;
 	height: .875em;
 	stroke: currentColor;
 }
@@ -33,8 +40,15 @@
 }
 
 .cs-box-element-content {
-	text-align: justify;
 	font-size: 0.25em;
 	margin: .75em 1em 0;
 	padding-bottom: .75em;
+}
+
+.cs-box-element-content-long {
+	text-align: justify;
+}
+
+.cs-box-element-content-short {
+	text-align: center;
 }
