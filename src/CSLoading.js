@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import CSBoxElement from './CSBoxElement';
 
 import '../style/CSEffects.css';
-import '../style/CSLoadingAndError.css';
 
 class CSLoading extends Component {
 	getLoadingSymbol() {
 		return (
-			<svg className='cs-box-element-head-symbol cs-effect-rotate' viewBox="0 0 100 100">
+			<svg className='cs-box-element-head-symbol-stroke cs-effect-rotate' viewBox="0 0 100 100">
 				<circle
-					cx='50' cy='50' r='45' fill='transparent'
+					cx='50' cy='50' r='45'
 					strokeWidth='10'
 					strokeLinecap='round'
 					strokeDasharray='0,28.27433'
