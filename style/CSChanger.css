@@ -1,0 +1,21 @@
+.cs-changer-item {
+	transition: opacity 0.25s;
+}
+
+/*
+.cs-changer-item-active {
+
+}
+*/
+
+.cs-changer-item-inactive {
+	display: none;
+}
+
+.cs-changer-item-hide {
+	opacity: 0;
+}
+
+.cs-changer-item-show {
+	height: 1;
+}
