@@ -51,7 +51,7 @@ class CSChanger extends Component {
 
 	render() {
 		return (
-			<div addClassName='cs-changer'>
+			<div className='cs-changer'>
 				{
 					React.Children.map(this.props.children, (child, i) => {
 						return (
