@@ -1,0 +1,5 @@
+.cs-centered {
+	left: 50%;
+	position: absolute;
+	transform: translatex(-50%);
+}

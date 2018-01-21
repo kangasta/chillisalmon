@@ -2,6 +2,7 @@
 	.cs-box-element {
 		font-size: 10vh;
 		min-height: 30vh;
+		text-align: center;
 		width: 60vh;
 	}
 }
@@ -10,6 +11,7 @@
 	.cs-box-element {
 		font-size: 10vw;
 		min-height: 30vw;
+		text-align: center;
 		width: 60vw;
 	}
 }
