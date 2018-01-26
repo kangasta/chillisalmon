@@ -3,6 +3,7 @@ import CSBoxElement from './CSBoxElement';
 import CSCenterBox from './CSCenterBox';
 import CSCentered from './CSCentered';
 import CSChanger from './CSChanger';
+import CSClock from './CSClock';
 import CSError from './CSError';
 import CSFooter from './CSFooter';
 import CSIntervalChanger from './CSIntervalChanger';
@@ -17,6 +18,7 @@ export {
 	CSCenterBox,
 	CSCentered,
 	CSChanger,
+	CSClock,
 	CSError,
 	CSFooter,
 	CSIntervalChanger,
