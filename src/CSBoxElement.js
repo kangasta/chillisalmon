@@ -9,7 +9,7 @@ class CSBoxElement extends Component {
 	render() {
 		const { addClassName, children, className, head, long, title, ...props } = this.props;
 		return (
-			<div className={'cs-box-element ' + addClassName + ' ' + className} {...props}>
+			<div className={'cs-element cs-box-element ' + addClassName + ' ' + className} {...props}>
 				<div className='cs-box-element-head'>{head}</div>
 				<div className='cs-box-element-title'>{title}</div>
 				<div className={'cs-box-element-content cs-box-element-content-' + (long ? 'long' : 'short')}>{children}</div>

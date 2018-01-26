@@ -7,7 +7,7 @@ import '../style/CSListElement.css';
 class CSListElement extends Component {
 	render() {
 		return (
-			<CSDivWrapper addClassName='cs-list-element ' {...this.props}/>
+			<CSDivWrapper addClassName='cs-element cs-list-element ' {...this.props}/>
 		);
 	}
 }
