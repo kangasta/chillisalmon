@@ -1,5 +1,5 @@
 import CSBackground from './CSBackground';
-import CSBoxElement from './CSBoxElement';
+import CSElement from './CSElement';
 import CSCenterBox from './CSCenterBox';
 import CSCentered from './CSCentered';
 import CSChanger from './CSChanger';
@@ -9,12 +9,11 @@ import CSFooter from './CSFooter';
 import CSIntervalChanger from './CSIntervalChanger';
 import CSLoading from './CSLoading';
 import CSList from './CSList';
-import CSListElement from './CSListElement';
 import CSMessage from './CSMessage';
 
 export {
 	CSBackground,
-	CSBoxElement,
+	CSElement,
 	CSCenterBox,
 	CSCentered,
 	CSChanger,
@@ -23,7 +22,6 @@ export {
 	CSFooter,
 	CSIntervalChanger,
 	CSList,
-	CSListElement,
 	CSLoading,
 	CSMessage,
 };

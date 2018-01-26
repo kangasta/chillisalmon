@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import CSBoxElement from './CSBoxElement';
+import CSElement from './CSElement';
 
 import '../style/CSEffects.css';
 
 class CSLoading extends Component {
 	getLoadingSymbol() {
 		return (
-			<svg className='cs-box-element-head-symbol-stroke cs-effect-rotate' viewBox="0 0 100 100">
+			<svg className='cs-element-head-symbol-stroke cs-effect-rotate' viewBox="0 0 100 100">
 				<circle
 					cx='50' cy='50' r='45'
 					strokeWidth='10'
@@ -22,9 +22,9 @@ class CSLoading extends Component {
 	render() {
 		const {children, ...props} = this.props;
 		return (
-			<CSBoxElement addClassName='cs-loading' head={this.getLoadingSymbol()} title='Loading' {...props}>
+			<CSElement addClassName='cs-loading' head={this.getLoadingSymbol()} title='Loading' {...props}>
 				{children}
-			</CSBoxElement>
+			</CSElement>
 		);
 	}
 }

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import CSBoxElement from './CSBoxElement';
+import CSElement from './CSElement';
 
 import '../style/CSEffects.css';
 
 class CSMessage extends Component {
-	getLoadingSymbol() {
+	getMessageSymbol() {
 		return (
-			<svg className='cs-box-element-head-symbol-fill' viewBox="0 0 100 100">
+			<svg className='cs-element-head-symbol-fill' viewBox="0 0 100 100">
 				<rect x='0' y='0' width='100' height='70'/>
 				<polygon points="0,60 0,100 40,60"/>
 			</svg>
@@ -18,9 +18,9 @@ class CSMessage extends Component {
 	render() {
 		const {children, title, ...props} = this.props;
 		return (
-			<CSBoxElement addClassName='cs-loading' head={this.getLoadingSymbol()} long={true} title={title} {...props}>
+			<CSElement addClassName='cs-loading' head={this.getMessageSymbol()} long={true} title={title} {...props}>
 				{children}
-			</CSBoxElement>
+			</CSElement>
 		);
 	}
 }

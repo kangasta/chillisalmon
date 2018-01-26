@@ -7,7 +7,7 @@ import '../style/CSCenterBox.css';
 class CSCenterBox extends Component {
 	render() {
 		return (
-			<CSDivWrapper addClassName='cs-center-box ' {...this.props}/>
+			<CSDivWrapper addClassName='cs-box cs-center-box ' {...this.props}/>
 		);
 	}
 }

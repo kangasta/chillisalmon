@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import 'moment-timezone';
 
-import CSBoxElement from './CSBoxElement';
+import CSElement from './CSElement';
 
 import '../style/CSEffects.css';
 
@@ -46,7 +46,7 @@ class CSClock extends Component {
 		const h_rotate = (Number(time[0]) % 12 + Number(time[1]) / 60) * 30;
 		const min_rotate = Number(time[1]) * 6;
 		return (
-			<svg className='cs-box-element-head-symbol-stroke' viewBox="0 0 100 100">
+			<svg className='cs-element-head-symbol-stroke' viewBox="0 0 100 100">
 				<circle cx='50' cy='50' r='47.5'
 					strokeWidth='5'
 				/>
@@ -64,9 +64,9 @@ class CSClock extends Component {
 
 	render() {
 		return (
-			<CSBoxElement addClassName='cs-clock' head={this.getAnalogClock()} title={this.state.time} {...this.props}>
+			<CSElement addClassName='cs-clock' head={this.getAnalogClock()} title={this.state.time} {...this.props}>
 				{this.state.city}
-			</CSBoxElement>
+			</CSElement>
 		);
 	}
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { CSListElement } from '../ChilliSalmon';
+import { CSElement } from '../ChilliSalmon';
 
-describe('CSListElement', () => {
+describe('CSElement', () => {
 	it('renders without crashing', () => {
-		mount(<CSListElement/>);
+		mount(<CSElement/>);
 	});
 });

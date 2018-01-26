@@ -1,0 +1,99 @@
+@media screen and (orientation:landscape) {
+	.cs-box .cs-element {
+		font-size: 10vh;
+		min-height: 30vh;
+		text-align: center;
+		width: 60vh;
+	}
+}
+
+@media screen and (orientation:portrait) {
+	.cs-box .cs-element {
+		font-size: 10vw;
+		min-height: 30vw;
+		text-align: center;
+		width: 60vw;
+	}
+}
+
+.cs-list .cs-element {
+	font-size: .5em;
+	margin: .125em;
+	min-height: 1.4em;
+	width: 100%;
+}
+
+.cs-element-head {
+	height: 1em;
+	vertical-align: bottom;
+}
+
+.cs-box .cs-element-head {
+	font-size: 1.5em;
+	padding-top: .125em;
+}
+
+.cs-list .cs-element-head {
+	font-size: 1em;
+	float: left;
+	padding-left: .25em;
+}
+
+.cs-element-head-symbol-fill {
+	fill: currentColor;
+	height: .875em;
+	stroke: transparent;
+}
+
+.cs-element-head-symbol-stroke {
+	fill: transparent;
+	height: .875em;
+	stroke: currentColor;
+}
+
+.cs-box .cs-element-title {
+	font-size: 0.5em;
+	height: 1em;
+	margin: .25em 0 .375em;
+}
+
+.cs-list .cs-element-title {
+	font-size: 0.5em;
+	margin: .25em 0 .375em;
+	overflow: auto;
+	padding: .25em .5em 0;
+	text-align: left;
+	width: auto;
+}
+
+.cs-box .cs-element-content {
+	font-size: 0.25em;
+	margin: .75em 1em 0;
+	padding-bottom: .75em;
+}
+
+.cs-box .cs-element-content-long {
+	text-align: justify;
+}
+
+.cs-box .cs-element-content-short {
+	text-align: center;
+}
+
+.cs-list .cs-element-content {
+	font-size: 0.25em;
+	margin: .75em 0 0;
+	overflow: auto;
+	padding: 0 1em .75em;
+	text-align: left;
+}
+.cs-box .cs-element-right {
+	display: none;
+}
+
+.cs-list .cs-element-right {
+	display: block;
+	float: right;
+	height: 1.4em;
+	text-align: left;
+}
