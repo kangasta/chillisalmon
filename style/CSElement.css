@@ -20,7 +20,7 @@
 	font-size: .5em;
 	margin: .125em;
 	min-height: 1.4em;
-	width: 100%;
+	width: auto;
 }
 
 .cs-element-head {
@@ -51,6 +51,10 @@
 	stroke: currentColor;
 }
 
+.cs-list .cs-element-main {
+	overflow: auto;
+}
+
 .cs-box .cs-element-title {
 	font-size: 0.5em;
 	height: 1em;
@@ -59,8 +63,7 @@
 
 .cs-list .cs-element-title {
 	font-size: 0.5em;
-	margin: .25em 0 .375em;
-	overflow: auto;
+	margin: 0 0 .375em;
 	padding: .25em .5em 0;
 	text-align: left;
 	width: auto;
@@ -83,7 +86,6 @@
 .cs-list .cs-element-content {
 	font-size: 0.25em;
 	margin: .75em 0 0;
-	overflow: auto;
 	padding: 0 1em .75em;
 	text-align: left;
 }

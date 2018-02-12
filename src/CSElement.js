@@ -12,8 +12,10 @@ class CSElement extends Component {
 			<div className={'cs-element ' + addClassName + ' ' + className} {...props}>
 				{ head ? <div className='cs-element-head'>{head}</div> : null }
 				<div className='cs-element-right'>{right}</div>
-				<div className='cs-element-title'>{title}</div>
-				<div className={'cs-element-content cs-element-content-' + (long ? 'long' : 'short')}>{children}</div>
+				<div className='cs-element-main'>
+					<div className='cs-element-title'>{title}</div>
+					<div className={'cs-element-content cs-element-content-' + (long ? 'long' : 'short')}>{children}</div>
+				</div>
 			</div>
 		);
 	}
