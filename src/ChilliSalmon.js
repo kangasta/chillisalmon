@@ -7,9 +7,10 @@ import CSClock from './CSClock';
 import CSError from './CSError';
 import CSFooter from './CSFooter';
 import CSIntervalChanger from './CSIntervalChanger';
-import CSLoading from './CSLoading';
 import CSList from './CSList';
+import CSLoading from './CSLoading';
 import CSMessage from './CSMessage';
+import CSTitle from './CSTitle';
 
 export {
 	CSBackground,
@@ -24,4 +25,5 @@ export {
 	CSList,
 	CSLoading,
 	CSMessage,
+	CSTitle,
 };
