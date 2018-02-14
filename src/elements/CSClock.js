@@ -36,7 +36,7 @@ class CSClock extends Component {
 
 	getInfo() {
 		if (this.props.timezone && moment.tz.zone(this.props.timezone)) {
-			return this.props.timezone.split('/')[1];
+			return this.props.timezone.split('/')[1].replace(/_/g, ' ');
 		}
 		return moment.tz.guess().split('/')[1];
 	}

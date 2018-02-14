@@ -16,6 +16,10 @@ describe('CSClock', () => {
 		expect(wrapper.find('.cs-element-title').text()).toBe(moment().format('HH:mm'));
 		expect(wrapper.find('.cs-element-content').text()).toBe(moment.tz.guess().split('/')[1]);
 	});
+	it('replaces \'_\' in timezone name with \' \'',()=>{
+		const wrapper = mount(<CSClock timezone='America/New_York'/>);
+		expect(wrapper.find('.cs-element-content').text()).toBe('New York');
+	});
 	it('allows custom timezone', () => {
 		const wrapper = mount(<CSClock timezone='Asia/Shanghai'/>);
 		expect(wrapper.find('.cs-element-title').text()).toBe(moment().tz('Asia/Shanghai').format('HH:mm'));
