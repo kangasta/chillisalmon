@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../style/CSChanger.css';
+import '../../style/CSChanger.css';
 
 class CSChanger extends Component {
 	constructor(props) {

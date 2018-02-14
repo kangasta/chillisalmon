@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import 'moment-timezone';
 
-import CSElement from './CSElement';
+import { CSElement } from '../ChilliSalmon';
 
-import '../style/CSEffects.css';
+import '../../style/CSEffects.css';
 
 class CSClock extends Component {
 	constructor(props) {

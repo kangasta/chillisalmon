@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import CSChanger from './CSChanger';
+import { CSChanger } from '../ChilliSalmon';
 
 class CSIntervalChanger extends Component {
 	constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import CSElement from './CSElement';
+import { CSElement } from '../ChilliSalmon';
 
 class CSError extends Component {
 	getErrorSymbol() {

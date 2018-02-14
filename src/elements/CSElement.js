@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-//import CSDivWrapper from './CSDivWrapper';
+//import CSDivWrapper from '../utils/CSDivWrapper';
 
-import '../style/CSElement.css';
+import '../../style/CSElement.css';
 
 class CSElement extends Component {
 	render() {

@@ -1,15 +1,15 @@
 import CSBackground from './CSBackground';
-import CSElement from './CSElement';
+import CSElement from './elements/CSElement';
 import CSCenterBox from './CSCenterBox';
 import CSCentered from './CSCentered';
-import CSChanger from './CSChanger';
-import CSClock from './CSClock';
-import CSError from './CSError';
+import CSChanger from './changers/CSChanger';
+import CSClock from './elements/CSClock';
+import CSError from './elements/CSError';
 import CSFooter from './CSFooter';
-import CSIntervalChanger from './CSIntervalChanger';
+import CSIntervalChanger from './changers/CSIntervalChanger';
 import CSList from './CSList';
-import CSLoading from './CSLoading';
-import CSMessage from './CSMessage';
+import CSLoading from './elements/CSLoading';
+import CSMessage from './elements/CSMessage';
 import CSTitle from './CSTitle';
 
 export {

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import CSElement from './CSElement';
-
-import '../style/CSEffects.css';
+import { CSElement } from '../ChilliSalmon';
 
 class CSMessage extends Component {
 	getMessageSymbol() {
@@ -18,7 +16,7 @@ class CSMessage extends Component {
 	render() {
 		const {children, title, ...props} = this.props;
 		return (
-			<CSElement addClassName='cs-loading' head={this.getMessageSymbol()} long={true} title={title} {...props}>
+			<CSElement addClassName='cs-message' head={this.getMessageSymbol()} long={true} title={title} {...props}>
 				{children}
 			</CSElement>
 		);

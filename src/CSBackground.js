@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CSDivWrapper from './CSDivWrapper';
+import CSDivWrapper from './utils/CSDivWrapper';
 
 import '../style/CSBackground.css';
 

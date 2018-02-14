@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import CSElement from './CSElement';
+import { CSElement } from '../ChilliSalmon';
 
-import '../style/CSEffects.css';
+import '../../style/CSEffects.css';
 
 class CSLoading extends Component {
 	getLoadingSymbol() {
