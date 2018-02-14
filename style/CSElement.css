@@ -1,19 +1,32 @@
 @media screen and (orientation:landscape) {
-	.cs-box .cs-element {
+	.cs-element {
 		font-size: 10vh;
 		min-height: 30vh;
 		text-align: center;
 		width: 60vh;
 	}
+
+	.cs-inline .cs-element {
+		width: 30vh;
+	}
 }
 
 @media screen and (orientation:portrait) {
-	.cs-box .cs-element {
+	.cs-element {
+		width: 60vw;
+	}
+
+	.cs-inline .cs-element {
 		font-size: 10vw;
 		min-height: 30vw;
 		text-align: center;
-		width: 60vw;
+		width: 30vw;
 	}
+}
+
+.cs-inline .cs-element {
+	display: inline-block;
+	margin: .03125em;
 }
 
 .cs-list .cs-element {
@@ -24,13 +37,10 @@
 }
 
 .cs-element-head {
-	height: 1em;
-	vertical-align: bottom;
-}
-
-.cs-box .cs-element-head {
 	font-size: 1.5em;
+	height: 1em;
 	padding-top: .125em;
+	vertical-align: bottom;
 }
 
 .cs-list .cs-element-head {
@@ -55,7 +65,7 @@
 	overflow: auto;
 }
 
-.cs-box .cs-element-title {
+.cs-element-title {
 	font-size: 0.5em;
 	height: 1em;
 	margin: .25em 0 .375em;
@@ -69,17 +79,17 @@
 	width: auto;
 }
 
-.cs-box .cs-element-content {
+.cs-element-content {
 	font-size: 0.25em;
 	margin: .75em 1em 0;
 	padding-bottom: .75em;
 }
 
-.cs-box .cs-element-content-long {
+.cs-element-content-long {
 	text-align: justify;
 }
 
-.cs-box .cs-element-content-short {
+.cs-element-content-short {
 	text-align: center;
 }
 
@@ -89,7 +99,8 @@
 	padding: 0 1em .75em;
 	text-align: left;
 }
-.cs-box .cs-element-right {
+
+.cs-element-right {
 	display: none;
 }
 
