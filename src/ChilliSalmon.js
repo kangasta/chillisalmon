@@ -11,6 +11,7 @@ import CSIntervalChanger from './changers/CSIntervalChanger';
 import CSList from './CSList';
 import CSLoading from './elements/CSLoading';
 import CSMessage from './elements/CSMessage';
+import CSStatus from './elements/CSStatus';
 import CSTitle from './CSTitle';
 
 export {
@@ -27,5 +28,6 @@ export {
 	CSList,
 	CSLoading,
 	CSMessage,
+	CSStatus,
 	CSTitle,
 };
