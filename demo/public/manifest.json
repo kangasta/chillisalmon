@@ -1,0 +1,25 @@
+{
+  "short_name": "Chillisalmon demo",
+  "name": "Chillisalmon demo",
+  "icons": [
+    {
+      "src": "favicon128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#FA8072",
+  "background_color": "#FA8072"
+}

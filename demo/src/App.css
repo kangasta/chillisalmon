@@ -1,0 +1,22 @@
+:root {
+	--color-1: salmon;
+	--color-2: white;
+}
+
+.app-bg {
+	background: var(--color-1);
+}
+
+.app-box {
+	background: var(--color-2);
+	color: var(--color-1);
+}
+
+.app-title {
+	color: var(--color-2);
+}
+/*
+.app-footer {
+	color: var(--color-2);
+}
+*/
