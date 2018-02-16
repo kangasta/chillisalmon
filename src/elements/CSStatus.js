@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { CSElement } from '../ChilliSalmon';
+import { CSChanger, CSElement, CSSymbols } from '../ChilliSalmon';
 
 class CSStatus extends Component {
 	static get OK() { return 0; }
@@ -10,19 +10,11 @@ class CSStatus extends Component {
 
 	getStatusSymbol() {
 		return (
-			///*
-			<svg className='cs-element-head-symbol-stroke' viewBox="0 0 100 100">
-				<line x1="10" y1="60" x2="50" y2="90" strokeWidth="10" strokeLinecap="round"></line>
-				<line x1="50" y1="90" x2="90" y2="10" strokeWidth="10" strokeLinecap="round"></line>
-			</svg>
-			//*/
-			/*
-			<svg viewBox="0 0 100 100" className="cs-element-head-symbol-stroke">
-				<line x1="50" y1="10" x2="10" y2="90" strokeWidth="10" strokeLinecap="round"></line>
-				<line x1="10" y1="90" x2="90" y2="90" strokeWidth="10" strokeLinecap="round"></line>
-				<line x1="90" y1="90" x2="50" y2="10" strokeWidth="10" strokeLinecap="round"></line>
-			</svg>
-			*/
+			<CSChanger active={this.props.status}>
+				{CSSymbols.Ok}
+				{CSSymbols.Warning}
+				{CSSymbols.Error}
+			</CSChanger>
 		);
 	}
 
@@ -46,6 +38,7 @@ CSStatus.defaultProps = {
 CSStatus.propTypes = {
 	children: PropTypes.node,
 	right: PropTypes.node,
+	status: PropTypes.number,
 	title: PropTypes.node
 };
 

@@ -1,0 +1,11 @@
+.cs-symbols-fill {
+	fill: currentColor;
+	height: .875em;
+	stroke: transparent;
+}
+
+.cs-symbols-stroke {
+	fill: transparent;
+	height: .875em;
+	stroke: currentColor;
+}

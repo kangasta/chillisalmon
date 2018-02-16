@@ -49,18 +49,6 @@
 	padding-left: .25em;
 }
 
-.cs-element-head-symbol-fill {
-	fill: currentColor;
-	height: .875em;
-	stroke: transparent;
-}
-
-.cs-element-head-symbol-stroke {
-	fill: transparent;
-	height: .875em;
-	stroke: currentColor;
-}
-
 .cs-list .cs-element-main {
 	overflow: auto;
 }
