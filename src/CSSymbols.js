@@ -35,11 +35,27 @@ class CSSymbols extends Component {
 		);
 	}
 
+	static get Off() {
+		return (
+			<svg className='cs-symbols-stroke' viewBox="0 0 100 100">
+				<circle cx='50' cy='50' r='45' strokeWidth='10'/>
+			</svg>
+		);
+	}
+
 	static get Ok() {
 		return (
 			<svg className='cs-symbols-stroke' viewBox="0 0 100 100">
 				<line x1="10" y1="60" x2="50" y2="90" strokeWidth="10" strokeLinecap="round"></line>
 				<line x1="50" y1="90" x2="90" y2="10" strokeWidth="10" strokeLinecap="round"></line>
+			</svg>
+		);
+	}
+
+	static get On() {
+		return (
+			<svg className='cs-symbols-stroke' viewBox="0 0 100 100">
+				<line x1="50" y1="5" x2="50" y2="95" strokeWidth="10" strokeLinecap="round"></line>
 			</svg>
 		);
 	}

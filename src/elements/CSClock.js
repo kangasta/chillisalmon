@@ -47,9 +47,7 @@ class CSClock extends Component {
 		const min_rotate = Number(time[1]) * 6;
 		return (
 			<svg className='cs-symbols-stroke' viewBox="0 0 100 100">
-				<circle cx='50' cy='50' r='47.5'
-					strokeWidth='5'
-				/>
+				<circle cx='50' cy='50' r='47.5' strokeWidth='5'/>
 				<line x1='50' y1='50' x2='50' y2='15'
 					strokeWidth='5'
 					strokeLinecap='round'

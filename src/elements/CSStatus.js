@@ -4,16 +4,22 @@ import PropTypes from 'prop-types';
 import { CSChanger, CSElement, CSSymbols } from '../ChilliSalmon';
 
 class CSStatus extends Component {
-	static get OK() { return 0; }
-	static get WARN() { return 1; }
-	static get ERR() { return 2; }
+	static get OFF() { return 0; }
+	static get ON() { return 1; }
+	static get OK() { return 2; }
+	static get WARN() { return 3; }
+	static get ERR() { return 4; }
+	static get LOAD() { return 5; }
 
 	getStatusSymbol() {
 		return (
 			<CSChanger active={this.props.status}>
+				{CSSymbols.Off}
+				{CSSymbols.On}
 				{CSSymbols.Ok}
 				{CSSymbols.Warning}
 				{CSSymbols.Error}
+				{CSSymbols.Loading}
 			</CSChanger>
 		);
 	}
