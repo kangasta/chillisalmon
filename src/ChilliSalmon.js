@@ -12,6 +12,7 @@ import CSList from './CSList';
 import CSLoading from './elements/CSLoading';
 import CSMessage from './elements/CSMessage';
 import CSStatus from './elements/CSStatus';
+import CSSubElement from './elements/CSSubElement';
 import CSSymbols from './CSSymbols';
 import CSTitle from './CSTitle';
 
@@ -30,6 +31,7 @@ export {
 	CSLoading,
 	CSMessage,
 	CSStatus,
+	CSSubElement,
 	CSSymbols,
 	CSTitle,
 };
