@@ -15,6 +15,7 @@ import CSStatus from './elements/CSStatus';
 import CSSubElement from './elements/CSSubElement';
 import CSSymbols from './CSSymbols';
 import CSTitle from './CSTitle';
+import CSVerticalSplit from './CSVerticalSplit';
 
 export {
 	CSBackground,
@@ -34,4 +35,5 @@ export {
 	CSSubElement,
 	CSSymbols,
 	CSTitle,
+	CSVerticalSplit,
 };
