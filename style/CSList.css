@@ -1,13 +1,11 @@
 @media screen and (orientation:landscape) {
 	.cs-list {
-		font-size: 10vh;
-		min-width: 90vh;
+		min-width: 8em;
 	}
 }
 
 @media screen and (orientation:portrait) {
 	.cs-list {
-		font-size: 10vw;
-		min-width: 90vw;
+		min-width: 8em;
 	}
 }

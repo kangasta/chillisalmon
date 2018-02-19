@@ -1,26 +1,24 @@
 @media screen and (orientation:landscape) {
 	.cs-element {
-		font-size: 10vh;
-		min-height: 30vh;
+		min-height: 3em;
 		text-align: center;
-		width: 60vh;
+		width: 6em;
 	}
 
 	.cs-inline .cs-element {
-		width: 30vh;
+		width: 3em;
 	}
 }
 
 @media screen and (orientation:portrait) {
 	.cs-element {
-		width: 60vw;
+		width: 6em;
 	}
 
 	.cs-inline .cs-element {
-		font-size: 10vw;
-		min-height: 30vw;
+		min-height: 3em;
 		text-align: center;
-		width: 30vw;
+		width: 3em;
 	}
 }
 
