@@ -47,7 +47,7 @@ class App extends Component {
 							<CSList>
 								<CSStatus className='app-box' status={CSStatus.OFF} title='Status'>Status: Off</CSStatus>
 								<CSStatus className='app-box' status={CSStatus.ON} title='Status'>Status: On</CSStatus>
-								<CSStatus className='app-box' status={CSStatus.OK} right={[1,2,3,4,5].map((a)=>(<CSSubElement head={CSSymbols.Ok} title={a}/>))} title='Status'>Status: Ok</CSStatus>
+								<CSStatus className='app-box' status={CSStatus.OK} right={[1,2,3,4,5].map((a,i)=>(<CSSubElement key={i} head={CSSymbols.Ok} title={a}/>))} title='Status'>Status: Ok</CSStatus>
 								<CSStatus className='app-box' status={CSStatus.WARN} title='Status'>Status: Warning</CSStatus>
 								<CSStatus className='app-box' status={CSStatus.ERR} title='Status'>Status: Error</CSStatus>
 								<CSStatus className='app-box' status={CSStatus.LOAD} title='Status'>Status: Loading</CSStatus>
