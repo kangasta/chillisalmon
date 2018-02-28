@@ -9,7 +9,16 @@ node_js:
 jobs:
     include:
       - script: ./node_modules/.bin/eslint .;
-#      - script: npm test -- --coverage;
+      - script: npm test -- --coverage;
+      - stage: deploy
+        provider: releases
+        script: npm pack
+        api_key: $GITHUB_TOKEN
+        file_glob: true
+        file: "*.tgz"
+        skip_cleanup: true
+        on:
+          tags: true
 #      - stage: deploy
 #        script: npm run build;
 #        deploy:
