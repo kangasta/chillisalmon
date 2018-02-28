@@ -25,6 +25,8 @@
     "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
