@@ -4,21 +4,22 @@ node_js:
 
 #addons:
 #    code_climate:
-#      repo_token: ce02b8f433bcfcf474b8cb3e6bc363b07fc9dc5ecc229de03df6c0fc212bad93
+#      repo_token: 
 
 jobs:
     include:
       - script: ./node_modules/.bin/eslint .;
       - script: npm test -- --coverage;
       - stage: deploy
-        provider: releases
         script: npm pack
-        api_key: $GITHUB_TOKEN
-        file_glob: true
-        file: "*.tgz"
-        skip_cleanup: true
-        on:
-          tags: true
+        deploy:
+          provider: releases
+          api_key: $GITHUB_TOKEN
+          file_glob: true
+          file: "*.tgz"
+          skip_cleanup: true
+          on:
+            tags: true
 #      - stage: deploy
 #        script: npm run build;
 #        deploy:
