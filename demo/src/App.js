@@ -5,6 +5,7 @@ import {
 	CSBackground,
 	/*CSCentered,*/
 	CSClock,
+	CSElement,
 	CSError,
 	CSInline,
 	CSIntervalChanger,
@@ -31,6 +32,11 @@ class App extends Component {
 								<CSClock className='app-box'/>
 								<CSClock className='app-box' timezone='Asia/Shanghai'/>
 							</CSInline>
+							<CSInline>
+								<CSElement className='app-box' head={CSSymbols.NIC} title='NIC'>Much packets going through for sure</CSElement>
+								<CSElement className='app-box' head={CSSymbols.CPU} title='CPU'>Much processing going on here for sure</CSElement>
+							</CSInline>
+
 						</div>
 					}
 					right={
