@@ -6,7 +6,7 @@ import '../style/CSEffects.css';
 class CSSymbols extends Component {
 	static get CPU() {
 		return (
-			<svg className='cs-symbols-nic cs-symbols-fill' viewBox='0 0 100 100'>
+			<svg className='cs-symbols-cpu cs-symbols-fill' viewBox='0 0 100 100'>
 				<defs>
 					<mask id="cpu-mask">
 						<rect x="10" y="10" width="80" height="80" rx="5" ry="5" fill="white"/>

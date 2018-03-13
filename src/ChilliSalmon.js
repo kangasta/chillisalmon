@@ -14,6 +14,7 @@ import CSMessage from './elements/CSMessage';
 import CSStatus from './elements/CSStatus';
 import CSSubElement from './elements/CSSubElement';
 import CSSymbols from './CSSymbols';
+import CSTimeChanger from './changers/CSTimeChanger';
 import CSTitle from './CSTitle';
 import CSVerticalSplit from './CSVerticalSplit';
 
@@ -34,6 +35,7 @@ export {
 	CSStatus,
 	CSSubElement,
 	CSSymbols,
+	CSTimeChanger,
 	CSTitle,
 	CSVerticalSplit,
 };
