@@ -94,3 +94,11 @@
 	height: 1.4em;
 	text-align: left;
 }
+
+.cs-element input {
+	border: none;
+	border-bottom: thin solid currentColor;
+	color: inherit;
+	font: inherit;
+	width: 100%;
+}
