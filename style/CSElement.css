@@ -9,8 +9,9 @@
 */
 
 .cs-element {
-	width: 6em;
+	width: auto;
 	overflow: hidden;
+	text-align: center;
 	vertical-align: top;
 }
 
@@ -24,7 +25,7 @@
 
 .cs-list .cs-element {
 	font-size: .5em;
-	margin: .125em;
+	margin: .125em 0;
 	min-height: 1.4em;
 	width: auto;
 }
