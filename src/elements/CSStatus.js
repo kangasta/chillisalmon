@@ -11,9 +11,26 @@ class CSStatus extends Component {
 	static get ERR() { return 4; }
 	static get LOAD() { return 5; }
 
-	getStatusSymbol() {
+	static getStatusString(status) {
+		switch (status) {
+		case CSStatus.OFF:
+			return 'off';
+		case CSStatus.ON:
+			return 'on';
+		case CSStatus.OK:
+			return 'ok';
+		case CSStatus.WARN:
+			return 'warning';
+		case CSStatus.ERR:
+			return 'error';
+		case CSStatus.LOAD:
+			return 'loading';
+		}
+	}
+
+	static getStatusSymbol(status) {
 		return (
-			<CSChanger active={this.props.status}>
+			<CSChanger active={status}>
 				{CSSymbols.Off}
 				{CSSymbols.On}
 				{CSSymbols.Ok}
@@ -27,7 +44,7 @@ class CSStatus extends Component {
 	render() {
 		const {children, title, right, ...props} = this.props;
 		return (
-			<CSElement addClassName='cs-status' head={this.getStatusSymbol()} title={title} right={right} {...props}>
+			<CSElement addClassName={'cs-status cs-status-' + CSStatus.getStatusString(this.props.status)} head={CSStatus.getStatusSymbol(this.props.status)} title={title} right={right} {...props}>
 				{children}
 			</CSElement>
 		);
