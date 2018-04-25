@@ -1,6 +1,6 @@
 {
   "name": "chillisalmon",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "private": true,
   "main": "build/ChilliSalmon.js",
   "devDependencies": {
