@@ -4,16 +4,16 @@
 	--color-2: white;
 }
 
-.app-bg {
+.cs-background {
 	background: var(--color-1);
 }
 
-.app-box {
+.cs-element {
 	background: var(--color-2);
 	color: var(--color-1);
 }
 
-.app-title {
+.cs-title {
 	color: var(--color-2);
 }
 /*

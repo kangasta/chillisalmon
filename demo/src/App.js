@@ -3,26 +3,47 @@ import './App.css';
 
 import {
 	CSBackground,
-	/*CSCentered,*/
+	CSCentered,
 	CSClock,
-	CSElement,
-	CSError,
+	/*CSElement,*/
+	/*CSError,*/
 	CSInline,
-	CSIntervalChanger,
-	CSLoading,
+	/*CSIntervalChanger,*/
+	/*CSLoading,*/
 	CSList,
 	CSMessage,
-	CSStatus,
-	CSSubElement,
-	CSSymbols,
+	/*CSStatus,*/
+	/*CSSubElement,*/
+	/*CSSymbols,*/
 	CSTitle,
-	CSVerticalSplit
+	/*CSVerticalSplit*/
 } from 'chillisalmon';
 
 class App extends Component {
 	render() {
 		return (
 			<div className="app">
+				<CSCentered>
+					<CSTitle>Messages</CSTitle>
+					<CSMessage title='Your message:'>
+						<input type='text'/>
+					</CSMessage>
+					<CSTitle>Time</CSTitle>
+					<CSList>
+						<CSClock timezone='America/New_York'/>
+						<CSClock/>
+						<CSClock timezone='Asia/Shanghai'/>
+					</CSList>
+					<CSTitle>Time</CSTitle>
+					<CSInline>
+						<CSClock timezone='America/New_York'/>
+						<CSClock/>
+						<CSClock timezone='Asia/Shanghai'/>
+					</CSInline>
+				</CSCentered>
+				<CSBackground/>
+			</div>
+			/*<div className="app">
 				<CSVerticalSplit
 					left={
 						<div>
@@ -36,7 +57,14 @@ class App extends Component {
 								<CSElement className='app-box' head={CSSymbols.NIC} title='NIC'>Much packets going through for sure</CSElement>
 								<CSElement className='app-box' head={CSSymbols.CPU} title='CPU'>Much processing going on here for sure</CSElement>
 							</CSInline>
-
+							<CSTitle className='app-title'>Settings</CSTitle>
+							<CSList>
+								<CSElement className='app-box'
+									head={CSSymbols.CPU}
+									title={<input/>}
+								>CPU model number</CSElement>
+								<CSError className='app-box'>Might be bork</CSError>
+							</CSList>
 						</div>
 					}
 					right={
@@ -64,6 +92,7 @@ class App extends Component {
 				/>
 				<CSBackground className='app-bg'/>
 			</div>
+			*/
 		);
 	}
 }
