@@ -114,6 +114,27 @@ class CSSymbols extends Component {
 		);
 	}
 
+	static get Settings() {
+		return (
+			<svg className='cs-symbols-settings cs-symbols-fill' viewBox='0 0 100 100'>
+				<defs>
+					<mask id="cpu-mask">
+						<circle cx="50" cy="50" r="37" fill="white"/>
+
+						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(0 50,50)"/>
+						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(45 50,50)"/>
+						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(90 50,50)"/>
+						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(135 50,50)"/>
+
+						<circle cx="50" cy="50" r="25" fill="black"/>
+					</mask>
+				</defs>
+
+				<rect x="0" y="0" width="100" height="100" mask="url(#cpu-mask)"/>
+			</svg>
+		);
+	}
+
 	static get Warning() {
 		return (
 			<svg className='cs-symbols-warning cs-symbols-stroke' viewBox='0 0 100 100'>
