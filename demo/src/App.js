@@ -11,10 +11,10 @@ import {
 	/*CSIntervalChanger,*/
 	/*CSLoading,*/
 	CSList,
-	CSMessage,
-	/*CSStatus,*/
-	/*CSSubElement,*/
-	/*CSSymbols,*/
+	/*CSMessage,*/
+	CSStatus,
+	CSSubElement,
+	CSSymbols,
 	CSTitle,
 	/*CSVerticalSplit*/
 } from 'chillisalmon';
@@ -24,15 +24,14 @@ class App extends Component {
 		return (
 			<div className="app">
 				<CSCentered>
-					<CSTitle>Messages</CSTitle>
-					<CSMessage title='Your message:'>
-						<input type='text'/>
-					</CSMessage>
-					<CSTitle>Time</CSTitle>
+					<CSTitle>Element</CSTitle>
+					<CSClock/>
+					<CSTitle>List element</CSTitle>
 					<CSList>
 						<CSClock timezone='America/New_York'/>
 						<CSClock/>
 						<CSClock timezone='Asia/Shanghai'/>
+						<CSStatus className='app-box' status={CSStatus.OK} right={[1,2,3,4,5].map((a,i)=>(<CSSubElement key={i} head={CSSymbols.Ok} title={a}/>))} title='Status'>Status: Ok</CSStatus>
 					</CSList>
 					<CSTitle>Time</CSTitle>
 					<CSInline>

@@ -6,19 +6,12 @@
 
 .cs-sub-element-head {
 	font-size: 0.5em;
-	height: 1em;
-	margin: .25em 0 .375em;
+	line-height: 1.5em; /* .75 */
 	vertical-align: bottom;
 }
 
 .cs-sub-element-title {
-	font-size: 0.25em;
-	margin: .75em 1em 0;
-	padding-bottom: .75em;
-}
-
-.cs-element-content {
-	font-size: 0.25em;
-	margin: .75em 1em 0;
-	padding-bottom: .75em;
+	font-size: 0.375em;
+	line-height: 1.333em; /* 1 */
+	height: 1.333em; /* 1 */
 }

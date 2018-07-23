@@ -8,63 +8,89 @@
 }
 */
 
+/*
+Element
+*/
+
 .cs-element {
-	width: auto;
+	margin-bottom: 0.125em;
+	margin-right: 0.125em;
+	height: 4em;
+	min-width: 8em;
 	overflow: hidden;
 	text-align: center;
 	vertical-align: top;
+	width: auto;
 }
 
 .cs-inline .cs-element {
 	display: inline-block;
-	margin: .03125em;
-	min-height: 3em;
-	text-align: center;
-	width: 3em;
+	min-width: auto;
+	width: 3.9375em;
 }
 
 .cs-list .cs-element {
-	font-size: .5em;
-	margin: .125em 0;
-	min-height: 1.4em;
+	height: 1.25em;
+	text-align: left;
 	width: auto;
 }
 
+/*
+Head
+*/
+
 .cs-element-head {
-	font-size: 1.5em;
-	height: 1em;
-	padding-top: .125em;
-	vertical-align: bottom;
+	font-size: 1.75em;
+	line-height: 1em; /* 1.75 */
+	height: 1em; /* 1.75 */
+	padding: .07143em 0; /* .125 */
 }
 
 .cs-list .cs-element-head {
-	font-size: 1em;
 	float: left;
-	padding-left: .25em;
+	font-size: 1em;
+	line-height: 1em; /* 1 */
+	height: 1em; /* 1 */
+	padding: .125em; /* .125 */
+}
+
+/*
+Title
+*/
+
+.cs-element-title {
+	font-size: 1em;
+	line-height: 1.25em;
 }
 
 .cs-list .cs-element-main {
 	overflow: auto;
 }
 
-.cs-element-title {
-	font-size: 0.5em;
-	height: 1em;
-	margin: .25em 0 .375em;
-}
-
 .cs-list .cs-element-title {
 	font-size: 0.5em;
-	margin: 0 0 .375em;
-	padding: .25em .5em 0;
+	line-height: 1.5em; /* .75 */
+	padding-left: .25em; /* .125 */
 	text-align: left;
 	width: auto;
 }
 
+/*
+Content
+*/
+
 .cs-element-content {
-	font-size: 0.25em;
-	margin: .75em 1em 0;
-	padding-bottom: .75em;
+	font-size: 0.5em;
+	line-height: 1.5em; /* 1 */
+	height: 1.5em; /* 1 */
+}
+
+.cs-list .cs-element-content {
+	text-align: left;
+	font-size: 0.375em;
+	line-height: 1.333em; /* 1 */
+	height: 1.333em; /* 1 */
+	padding-left: .333em; /* .125 */
 }
 
 .cs-element-content-long {
@@ -78,12 +104,9 @@
 	white-space: nowrap;
 }
 
-.cs-list .cs-element-content {
-	font-size: 0.25em;
-	margin: .75em 0 0;
-	padding: 0 1em .75em;
-	text-align: left;
-}
+/*
+Right - TODO
+*/
 
 .cs-element-right {
 	display: none;
@@ -92,8 +115,16 @@
 .cs-list .cs-element-right {
 	display: block;
 	float: right;
-	height: 1.4em;
+	max-height: 1.25em;
 	text-align: left;
+}
+
+/*
+Inputs - TODO
+*/
+
+.cs-element input,.cs-element button {
+	margin: .25em 0;
 }
 
 .cs-element input {
