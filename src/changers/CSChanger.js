@@ -21,15 +21,16 @@ class CSChanger extends Component {
 		},50);
 	}
 
-	componentWillReceiveProps(next) {
-		if (next.active === this.state.active) return;
+	componentDidUpdate(prevProps) {
+		if (this.props.active === prevProps.active) return;
+		if (this.props.active === this.state.active) return;
 
 		// Hide current item
 		this.setState({isChanging: true},()=>{
 			// Change active element after 250ms
 			setTimeout(()=>{
 				this.setState({
-					active: next.active
+					active: this.props.active
 				});
 			},250);
 		});

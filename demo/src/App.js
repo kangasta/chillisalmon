@@ -6,12 +6,12 @@ import {
 	CSCentered,
 	CSClock,
 	/*CSElement,*/
-	/*CSError,*/
+	CSError,
 	CSInline,
-	/*CSIntervalChanger,*/
-	/*CSLoading,*/
+	CSIntervalChanger,
+	CSLoading,
 	CSList,
-	/*CSMessage,*/
+	CSMessage,
 	CSStatus,
 	CSSubElement,
 	CSSymbols,
@@ -24,6 +24,12 @@ class App extends Component {
 		return (
 			<div className="app">
 				<CSCentered>
+					<CSTitle>Changer</CSTitle>
+					<CSIntervalChanger interval={3000}>
+						<CSLoading className='app-box'>This will take forever</CSLoading>
+						<CSError className='app-box'>Might be bork</CSError>
+						<CSMessage className='app-box' title='Not broken' long={false}>This is just a feature</CSMessage>
+					</CSIntervalChanger>
 					<CSTitle>Element</CSTitle>
 					<CSClock/>
 					<CSTitle>List element</CSTitle>
