@@ -17,6 +17,7 @@ import CSSymbols from './CSSymbols';
 import CSTimeChanger from './changers/CSTimeChanger';
 import CSTitle from './CSTitle';
 import CSVerticalSplit from './CSVerticalSplit';
+import CSWhiteSpace from './CSWhiteSpace';
 
 export {
 	CSBackground,
@@ -38,4 +39,5 @@ export {
 	CSTimeChanger,
 	CSTitle,
 	CSVerticalSplit,
+	CSWhiteSpace,
 };

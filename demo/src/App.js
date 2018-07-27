@@ -16,7 +16,8 @@ import {
 	CSSubElement,
 	CSSymbols,
 	CSTitle,
-	/*CSVerticalSplit*/
+	/*CSVerticalSplit,*/
+	CSWhiteSpace
 } from 'chillisalmon';
 
 class App extends Component {
@@ -45,6 +46,7 @@ class App extends Component {
 						<CSClock/>
 						<CSClock timezone='Asia/Shanghai'/>
 					</CSInline>
+					<CSWhiteSpace/>
 				</CSCentered>
 				<CSBackground/>
 			</div>

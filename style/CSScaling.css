@@ -3,3 +3,9 @@
 		font-size: 10vw;
 	}
 }
+
+@media (min-width: 30rem) {
+	:root {
+		font-size: 3rem;
+	}
+}
