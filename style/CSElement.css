@@ -1,12 +1,4 @@
-/*
-@media screen and (orientation:landscape) {
-
-}
-
-@media screen and (orientation:portrait) {
-
-}
-*/
+@import url("CSScaling.css");
 
 /*
 Element
@@ -68,9 +60,9 @@ Title
 }
 
 .cs-list .cs-element-title {
-	font-size: 0.5em;
-	line-height: 1.5em; /* .75 */
-	padding-left: .25em; /* .125 */
+	font-size: 0.625em;
+	line-height: 1.25em; /* .75 */
+	padding-left: .2em; /* .125 */
 	text-align: left;
 	width: auto;
 }
@@ -87,10 +79,10 @@ Content
 
 .cs-list .cs-element-content {
 	text-align: left;
-	font-size: 0.375em;
-	line-height: 1.333em; /* 1 */
-	height: 1.333em; /* 1 */
-	padding-left: .333em; /* .125 */
+	font-size: 0.3125em;
+	line-height: 1.5em; /* 1 */
+	height: 1.5em; /* 1 */
+	padding-left: .4em; /* .125 */
 }
 
 .cs-element-content-long {
