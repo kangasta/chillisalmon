@@ -26,10 +26,10 @@ describe('CSClock', () => {
 		expect(wrapper.find('.cs-element-content').text()).toBe('Shanghai');
 	});
 	it('updates state', () => {
-		Date.now = jest.fn().mockReturnValue(new Date('2017-06-12T12:00'));
+		Date.now = jest.fn().mockReturnValue(new Date('2017-06-12T12:00Z'));
 		const wrapper = mount(<CSClock timezone='Etc/UTC'/>);
 		expect(wrapper.find('.cs-element-title').text()).toBe('12:00');
-		Date.now.mockReturnValue(new Date('2017-06-12T12:01'));
+		Date.now.mockReturnValue(new Date('2017-06-12T12:01Z'));
 		jest.runTimersToTime(60e3);
 		expect(wrapper.find('.cs-element-title').text()).toBe('12:01');
 	});
