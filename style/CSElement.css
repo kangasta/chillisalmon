@@ -10,6 +10,7 @@ Element
 	height: 4em;
 	min-width: 8em;
 	overflow: hidden;
+	padding: .125em 0;
 	text-align: center;
 	vertical-align: top;
 	width: auto;
@@ -23,6 +24,7 @@ Element
 
 .cs-list .cs-element {
 	height: 1.25em;
+	padding: .041666em 0;
 	text-align: left;
 	width: auto;
 }
