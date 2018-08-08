@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import CSDivWrapper from '../utils/CSDivWrapper';
 
-import '../style/CSFooter.css';
+import '../../style/CSFooter.css';
 
 class CSFooter extends Component {
 	render() {

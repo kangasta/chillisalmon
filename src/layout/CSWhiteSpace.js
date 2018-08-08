@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../style/CSWhiteSpace.css';
+import '../../style/CSWhiteSpace.css';
 
 class CSWhiteSpace extends Component {
 	render() {
