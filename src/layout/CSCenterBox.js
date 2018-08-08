@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import CSDivWrapper from './utils/CSDivWrapper';
+import CSDivWrapper from '../utils/CSDivWrapper';
 
-import '../style/CSCenterBox.css';
+import '../../style/CSCenterBox.css';
 
 class CSCenterBox extends Component {
 	render() {
