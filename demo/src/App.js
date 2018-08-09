@@ -5,7 +5,7 @@ import {
 	CSBackground,
 	CSCentered,
 	CSClock,
-	/*CSElement,*/
+	CSElement,
 	CSError,
 	CSInline,
 	CSIntervalChanger,
@@ -31,8 +31,8 @@ class App extends Component {
 						<CSError className='app-box'>Might be bork</CSError>
 						<CSMessage className='app-box' title='Not broken' long={false}>This is just a feature</CSMessage>
 					</CSIntervalChanger>
-					<CSTitle>Element</CSTitle>
-					<CSClock/>
+					<CSTitle>Image element</CSTitle>
+					<CSElement image={true} head={<img src='img.jpg'/>} title='Roe deer'>Capreolus capreolus</CSElement>
 					<CSTitle>List element</CSTitle>
 					<CSList>
 						<CSClock timezone='America/New_York'/>

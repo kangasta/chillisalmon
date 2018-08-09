@@ -7,9 +7,9 @@ import '../../style/CSElement.css';
 
 class CSElement extends Component {
 	render() {
-		const { addClassName, children, className, head, long, right, title, ...props } = this.props;
+		const { addClassName, children, className, head, image, long, right, title, ...props } = this.props;
 		return (
-			<div className={'cs-element ' + addClassName + ' ' + className} {...props}>
+			<div className={'cs-element ' + (image ? 'cs-image ' : '') + addClassName + ' ' + className} {...props}>
 				{ head ? <div className='cs-element-head'>{head}</div> : null }
 				<div className='cs-element-right'>{right}</div>
 				<div className='cs-element-main'>
@@ -26,6 +26,7 @@ CSElement.defaultProps = {
 	children: '',
 	className: '',
 	head: '',
+	image: false,
 	long: false,
 	right: '',
 	title: '',
@@ -36,6 +37,7 @@ CSElement.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
 	head: PropTypes.node,
+	image: PropTypes.bool,
 	long: PropTypes.bool,
 	right: PropTypes.node,
 	title: PropTypes.node,

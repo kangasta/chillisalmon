@@ -16,6 +16,11 @@ Element
 	width: auto;
 }
 
+.cs-element.cs-image {
+	height: 8.5em;
+	padding: 0 0 .125em;
+}
+
 .cs-inline .cs-element {
 	display: inline-block;
 	min-width: auto;
@@ -38,6 +43,15 @@ Head
 	line-height: 1em; /* 1.75 */
 	height: 1em; /* 1.75 */
 	padding: .07143em 0; /* .125 */
+}
+
+.cs-image .cs-element-head {
+	font-size: 6.5em;
+	padding: 0;
+}
+
+.cs-image .cs-element-head img {
+	max-height: 1em;
 }
 
 .cs-list .cs-element-head {
