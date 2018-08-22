@@ -42,9 +42,9 @@ class CSStatus extends Component {
 	}
 
 	render() {
-		const {children, title, right, ...props} = this.props;
+		const {children, title, status, symbol, right, ...props} = this.props;
 		return (
-			<CSElement addClassName={'cs-status cs-status-' + CSStatus.getStatusString(this.props.status)} head={CSStatus.getStatusSymbol(this.props.status)} title={title} right={right} {...props}>
+			<CSElement addClassName={'cs-status cs-status-' + CSStatus.getStatusString(status)} head={symbol ? symbol : CSStatus.getStatusSymbol(status)} title={title} right={right} {...props}>
 				{children}
 			</CSElement>
 		);
@@ -55,6 +55,7 @@ CSStatus.defaultProps = {
 	children: '',
 	right: '',
 	status: CSStatus.OK,
+	symbol: null,
 	title: 'Status'
 };
 
@@ -62,6 +63,7 @@ CSStatus.propTypes = {
 	children: PropTypes.node,
 	right: PropTypes.node,
 	status: PropTypes.number,
+	symbol: PropTypes.node,
 	title: PropTypes.node
 };
 
