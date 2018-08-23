@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import '../style/CSSymbols.css';
-import '../style/CSEffects.css';
+import '../../style/CSSymbols.css';
+import '../../style/CSEffects.css';
 
 class CSSymbols extends Component {
 	static get CPU() {

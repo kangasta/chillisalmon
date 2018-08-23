@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../style/CSVerticalSplit.css';
+import '../../style/CSVerticalSplit.css';
 
 class CSVerticalSplit extends Component {
 	render() {

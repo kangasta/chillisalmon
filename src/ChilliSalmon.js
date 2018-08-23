@@ -1,4 +1,4 @@
-import CSBackground from './CSBackground';
+import CSBackground from './misc/CSBackground';
 import CSElement from './elements/CSElement';
 import CSCenterBox from './layout/CSCenterBox';
 import CSCentered from './layout/CSCentered';
@@ -13,10 +13,10 @@ import CSLoading from './elements/CSLoading';
 import CSMessage from './elements/CSMessage';
 import CSStatus from './elements/CSStatus';
 import CSSubElement from './elements/CSSubElement';
-import CSSymbols from './CSSymbols';
+import CSSymbols from './misc/CSSymbols';
 import CSTimeChanger from './changers/CSTimeChanger';
 import CSTitle from './elements/CSTitle';
-import CSVerticalSplit from './CSVerticalSplit';
+import CSVerticalSplit from './layout/CSVerticalSplit';
 import CSWhiteSpace from './layout/CSWhiteSpace';
 
 export {

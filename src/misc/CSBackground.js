@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import CSDivWrapper from './utils/CSDivWrapper';
+import CSDivWrapper from '../utils/CSDivWrapper';
 
-import '../style/CSBackground.css';
+import '../../style/CSBackground.css';
 
 class CSBackground extends Component {
 	render() {
