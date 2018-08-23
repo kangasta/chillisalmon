@@ -16,6 +16,7 @@ import CSSubElement from './elements/CSSubElement';
 import CSSymbols from './misc/CSSymbols';
 import CSTimeChanger from './changers/CSTimeChanger';
 import CSTitle from './elements/CSTitle';
+import CSValidatorChanger from './changers/CSValidatorChanger';
 import CSVerticalSplit from './layout/CSVerticalSplit';
 import CSWhiteSpace from './layout/CSWhiteSpace';
 
@@ -38,6 +39,7 @@ export {
 	CSSymbols,
 	CSTimeChanger,
 	CSTitle,
+	CSValidatorChanger,
 	CSVerticalSplit,
 	CSWhiteSpace,
 };
