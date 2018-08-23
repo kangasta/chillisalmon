@@ -9,7 +9,7 @@ class CSElement extends Component {
 	render() {
 		const { addClassName, children, className, head, image, long, right, title, ...props } = this.props;
 		return (
-			<div className={'cs-element ' + (image ? 'cs-image ' : '') + addClassName + ' ' + className} {...props}>
+			<div className={'cs-element ' + (image ? 'cs-image ' : '') + (children ? '' : 'cs-element-no-content ' ) + addClassName + ' ' + className} {...props}>
 				{ head ? <div className='cs-element-head'>{head}</div> : null }
 				<div className='cs-element-right'>{right}</div>
 				<div className='cs-element-main'>

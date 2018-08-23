@@ -83,6 +83,16 @@ Title
 	width: auto;
 }
 
+.cs-element-no-content .cs-element-title {
+	font-size: 1.333em;
+	line-height: 1.5em; /* 2 */
+}
+
+.cs-list .cs-element-no-content .cs-element-title {
+	font-size: 1em;
+	line-height: 1.25em;
+}
+
 /*
 Content
 */
@@ -110,6 +120,10 @@ Content
 	text-align: center;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.cs-element-no-content .cs-element-content {
+	display: none;
 }
 
 /*
