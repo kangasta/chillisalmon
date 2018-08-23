@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import CSDivWrapper from './utils/CSDivWrapper';
+import CSDivWrapper from '../utils/CSDivWrapper';
 
-import '../style/CSList.css';
+import '../../style/CSList.css';
 
 class CSList extends Component {
 	render() {

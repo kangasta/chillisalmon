@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import CSDivWrapper from './utils/CSDivWrapper';
+import CSDivWrapper from '../utils/CSDivWrapper';
 
-import '../style/CSTitle.css';
+import '../../style/CSTitle.css';
 
 class CSTitle extends Component {
 	render() {
