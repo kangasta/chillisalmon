@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { CSChanger, CSError, CSLoading } from '../ChilliSalmon';
+import { CSChanger } from '../ChilliSalmon';
 
 class CSValidatorChanger extends Component {
 	getActive() {
@@ -10,11 +10,22 @@ class CSValidatorChanger extends Component {
 		return 2;
 	}
 
+	getStatusComponent(type) {
+		const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+		return (
+			<div className={capitalize(type)}>
+				<h1>{capitalize(type)}</h1>
+				<p>{this.props[type.toLowerCase()]}</p>
+			</div>
+		);
+	}
+
 	render() {
 		return (
 			<CSChanger active={this.getActive()}>
-				<CSError>{this.props.error ? this.props.error : ''}</CSError>
-				<CSLoading>{this.props.loading ? this.props.loading : ''}</CSLoading>
+				{this.getStatusComponent('error')}
+				{this.getStatusComponent('loading')}
 				{this.props.children}
 			</CSChanger>
 		);
