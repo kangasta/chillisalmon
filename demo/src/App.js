@@ -3,6 +3,7 @@ import './App.css';
 
 import {
 	/*CSIntervalChanger,*/
+	CSExpandable,
 	CSSymbols
 } from 'chillisalmon';
 
@@ -10,9 +11,12 @@ class App extends Component {
 	render() {
 		return (
 			<div className="app">
+				<h2>Symbols</h2>
 				<div className='Symbols'>
-					{['Error', 'Loading', 'Message', 'Off', 'On', 'Settings', 'Success', 'Warning'].map(symbol => <span key={symbol}  className='Symbol'>{CSSymbols[symbol]}</span>)}
+					{['Error', 'Expandable', 'Loading', 'Message', 'Off', 'On', 'Settings', 'Success', 'Warning'].map(symbol => <span key={symbol}  className='Symbol'>{CSSymbols[symbol]}</span>)}
 				</div>
+				<h2>Expandable</h2>
+				<CSExpandable>Content</CSExpandable>
 			</div>
 		);
 	}

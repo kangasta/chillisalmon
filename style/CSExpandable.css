@@ -1,0 +1,25 @@
+.CSExpandable .Content {
+	overflow: hidden;
+}
+
+.CSExpandable .Content {
+	transition: all 0.5s ease-in-out;
+}
+
+.CSExpandable .Content.Expanded {
+	max-height: 9999em;
+	transform: scale(1, 1)
+}
+
+.CSExpandable .Content.Hidden {
+	max-height: 0em;
+	transform: scale(1, 0)
+}
+
+.CSExpandable .Icon svg {
+	transition: all 0.3s ease-in-out;
+}
+
+.CSExpandable .Icon.Expanded svg {
+	transform: scale(1, -1);
+}

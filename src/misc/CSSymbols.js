@@ -20,6 +20,21 @@ class CSSymbols extends Component {
 		);
 	}
 
+	static get Expandable() {
+		return (
+			<svg className='Symbol Fill' viewBox='0 0 64 64'>
+				<defs>
+					<mask id='ExpandableMask'>
+						<rect x='0' y='0' width='64' height='64' rx='8' ry='8' fill='white'/>
+						<path d='M 16 24 l 16 16 l 16 -16' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin='round'/>
+					</mask>
+				</defs>
+
+				<rect x='0' y='0' width='64' height='64' mask='url(#ExpandableMask)'/>
+			</svg>
+		);
+	}
+
 	static get Loading() {
 		return (
 			<svg className='Symbol Stroke Loading' viewBox='0 0 64 64'>
