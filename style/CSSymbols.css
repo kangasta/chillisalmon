@@ -10,12 +10,20 @@
 	stroke: currentColor;
 }
 
-.Symbol.Settings:hover {
-	animation: SettingsRotate infinite 2s ease-in-out;
+.Symbol.Message {
+	transition: all 0.33s ease-in-out;
+}
+
+.Symbol.Message:hover {
+	transform: scale(-1, 1);
 }
 
 .Symbol.Loading {
 	animation: LoadingRotate infinite 2s ease-in-out;
+}
+
+.Symbol.Settings:hover {
+	animation: SettingsRotate infinite 2s ease-in-out;
 }
 
 @keyframes LoadingRotate {

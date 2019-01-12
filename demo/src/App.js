@@ -11,10 +11,7 @@ class App extends Component {
 		return (
 			<div className="app">
 				<div className='Symbols'>
-					<h1>Old</h1>
-					{['Message', 'On', 'Off'].map(symbol => <span key={symbol} className='Symbol'>{CSSymbols[symbol]}</span>)}
-					<h1>New</h1>
-					{['Error', 'Loading', 'Settings', 'Success', 'Warning'].map(symbol => <span key={symbol}  className='Symbol'>{CSSymbols[symbol]}</span>)}
+					{['Error', 'Loading', 'Message', 'Off', 'On', 'Settings', 'Success', 'Warning'].map(symbol => <span key={symbol}  className='Symbol'>{CSSymbols[symbol]}</span>)}
 				</div>
 			</div>
 		);

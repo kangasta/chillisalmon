@@ -3,33 +3,6 @@ import React, { Component } from 'react';
 import '../../style/CSSymbols.css';
 
 class CSSymbols extends Component {
-	static get Message() {
-		return (
-			<svg className='cs-symbols-message cs-symbols-fill' viewBox='0 0 100 100'>
-				<rect x='0' y='0' width='100' height='70'/>
-				<polygon points='0,60 0,100 40,60'/>
-			</svg>
-		);
-	}
-
-	static get Off() {
-		return (
-			<svg className='cs-symbols-off cs-symbols-stroke' viewBox='0 0 100 100'>
-				<circle cx='50' cy='50' r='45' strokeWidth='10'/>
-			</svg>
-		);
-	}
-
-	static get On() {
-		return (
-			<svg className='cs-symbols-on cs-symbols-stroke' viewBox='0 0 100 100'>
-				<line x1='50' y1='5' x2='50' y2='95' strokeWidth='10' strokeLinecap='round'></line>
-			</svg>
-		);
-	}
-
-	/* New: */
-
 	static get Error() {
 		return (
 			<svg className='Symbol Fill' viewBox='0 0 64 64'>
@@ -60,6 +33,52 @@ class CSSymbols extends Component {
 				<rect x='0' y='0' width='64' height='64' mask='url(#LoadingMask)'/>
 				*/}
 				<path d='M 16 4 v 16 l 10 12 l -10 12 v 16 h 32 v -16 l -10 -12 l 10 -12 v -16 h -32 M 16 6 l 16 6 l 16 -6 M 16 58 l 16 -6 l 16 6' strokeWidth='8' strokeLinecap='round' strokeLinejoin='round'/>
+			</svg>
+		);
+	}
+
+	static get Message() {
+		return (
+			<svg className='Symbol Fill Message' viewBox='0 0 64 64'>
+				<defs>
+					<mask id='MessageMask'>
+						<path d='M 32 56 l -8 -8 h -12 q -8 0 -8 -8 v -28 q 0 -8 8 -8 h 40 q 8 0 8 8 v 28 q 0 8 -8 8 h -12 l -8 8' fill='white' stroke='white' strokeWidth='8' strokeLinecap='round' strokeLinejoin='round'/>
+						<path d='M 32 11 v 20' stroke='black' strokeWidth='5' fill='none' strokeLinecap='round' strokeLinejoin='round'/>
+						<circle cx='32' cy='44' r='3' fill='black'/>
+					</mask>
+				</defs>
+
+				<rect x='0' y='0' width='64' height='64' mask='url(#MessageMask)'/>
+			</svg>
+		);
+	}
+
+	static get Off() {
+		return (
+			<svg className='Symbol Fill' viewBox='0 0 64 64'>
+				<defs>
+					<mask id='OffMask'>
+						<rect x='0' y='0' width='64' height='64' rx='8' ry='8' fill='white'/>
+						<circle cx='32' cy='32' r='20' fill='white' stroke='black' strokeWidth='6'/>
+					</mask>
+				</defs>
+
+				<rect x='0' y='0' width='64' height='64' mask='url(#OffMask)'/>
+			</svg>
+		);
+	}
+
+	static get On() {
+		return (
+			<svg className='Symbol Fill' viewBox='0 0 64 64'>
+				<defs>
+					<mask id='OnMask'>
+						<rect x='0' y='0' width='64' height='64' rx='8' ry='8' fill='white'/>
+						<path d='M 32 14 v 36' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round'/>
+					</mask>
+				</defs>
+
+				<rect x='0' y='0' width='64' height='64' mask='url(#OnMask)'/>
 			</svg>
 		);
 	}
@@ -103,7 +122,7 @@ class CSSymbols extends Component {
 					<mask id='WarningMask'>
 						<path d='M 32 4 l 28 56 h -56 l 28 -56' fill='white' stroke='white' strokeWidth='8' strokeLinecap='round' strokeLinejoin='round'/>
 						<path d='M 32 20 v 20' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin='round'/>
-						<circle cx='32' cy='54' r='3' fill='black'/>
+						<circle cx='32' cy='53' r='3' fill='black'/>
 					</mask>
 				</defs>
 				<rect x='0' y='0' width='64' height='64' mask='url(#WarningMask)'/>
