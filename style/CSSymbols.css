@@ -1,11 +1,23 @@
-.cs-symbols-fill {
+.cs-symbols-fill,.Symbol.Fill {
 	fill: currentColor;
 	height: 1em;
 	stroke: transparent;
 }
 
-.cs-symbols-stroke {
+.cs-symbols-stroke,.Symbol.Stroke {
 	fill: transparent;
 	height: 1em;
 	stroke: currentColor;
+}
+
+.Symbol.Loading {
+	animation: LoadingRotate infinite 3s ease-in-out;
+}
+
+@keyframes LoadingRotate {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(180deg);}
+	50% {transform: rotate(180deg);}
+	75% {transform: rotate(360deg);}
+	100% {transform: rotate(360deg);}
 }

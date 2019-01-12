@@ -8,11 +8,13 @@
 	background: var(--color-1);
 }
 
-.cs-element {
-	background: var(--color-2);
-	color: var(--color-1);
+.app {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 
-.cs-title {
-	color: var(--color-2);
+span.Symbol {
+	margin-left: 0.25em;
 }
