@@ -28,37 +28,16 @@ class CSSymbols extends Component {
 		);
 	}
 
-	static get Settings() {
-		return (
-			<svg className='cs-symbols-settings cs-symbols-fill' viewBox='0 0 100 100'>
-				<defs>
-					<mask id="cpu-mask">
-						<circle cx="50" cy="50" r="37" fill="white"/>
-
-						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(0 50,50)"/>
-						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(45 50,50)"/>
-						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(90 50,50)"/>
-						<rect x="0" y="42" width="100" height="16" rx="4" ry="4" fill="white" transform="rotate(135 50,50)"/>
-
-						<circle cx="50" cy="50" r="25" fill="black"/>
-					</mask>
-				</defs>
-
-				<rect x="0" y="0" width="100" height="100" mask="url(#cpu-mask)"/>
-			</svg>
-		);
-	}
-
 	/* New: */
 
 	static get Error() {
 		return (
 			<svg className='Symbol Fill' viewBox='0 0 64 64'>
 				<defs>
-					<mask id="ErrorMask">
+					<mask id='ErrorMask'>
 						<circle cx='32' cy='32' r='32' fill='white'/>
 						{/*<rect x='0' y='0' height='64' width='64' rx='8' ry='8' fill='white'/>*/}
-						<path d='M 20 20 L 44 44 M 20 44 L 44 20' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin="round"/>
+						<path d='M 20 20 L 44 44 M 20 44 L 44 20' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin='round'/>
 						{/*
 						<path d='M 16 16 L 48 48 M 16 48 L 48 16' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round'/>*/}
 					</mask>
@@ -73,7 +52,7 @@ class CSSymbols extends Component {
 			<svg className='Symbol Stroke Loading' viewBox='0 0 64 64'>
 				{/*
 				<defs>
-					<mask id="LoadingMask">
+					<mask id='LoadingMask'>
 						<circle cx='32' cy='32' r='32' fill='white'/>
 						{[-16, 0, 16].map(x => <circle cx={32 + x} cy='32' r='5' fill='black'/>)}
 					</mask>
@@ -85,13 +64,31 @@ class CSSymbols extends Component {
 		);
 	}
 
+	static get Settings() {
+		return (
+			<svg className='Symbol Fill Settings' viewBox='0 0 64 64'>
+				<defs>
+					<mask id='SettingsMask'>
+						<circle cx='32' cy='32' r='26' fill='white'/>
+						{['0', '45', '90', '135'].map(rotate => (
+							<rect key={rotate} x='0' y='26' width='64' height='12' rx='4' ry='4' fill='white' transform={'rotate(' + rotate + ' 32,32)'}/>
+						))}
+						<circle cx='32' cy='32' r='16' fill='black'/>
+					</mask>
+				</defs>
+
+				<rect x='0' y='0' width='64' height='64' mask='url(#SettingsMask)'/>
+			</svg>
+		);
+	}
+
 	static get Success() {
 		return (
 			<svg className='Symbol Fill' viewBox='0 0 64 64'>
 				<defs>
-					<mask id="SuccessMask">
+					<mask id='SuccessMask'>
 						<circle cx='32' cy='32' r='32' fill='white'/>
-						<path d='M 16 32 L 32 44 L 44 20' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin="round"/>
+						<path d='M 16 32 L 32 44 L 44 20' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin='round'/>
 					</mask>
 				</defs>
 				<rect x='0' y='0' width='64' height='64' mask='url(#SuccessMask)'/>
@@ -103,9 +100,9 @@ class CSSymbols extends Component {
 		return (
 			<svg className='Symbol Fill' viewBox='0 0 64 64'>
 				<defs>
-					<mask id="WarningMask">
+					<mask id='WarningMask'>
 						<path d='M 32 4 l 28 56 h -56 l 28 -56' fill='white' stroke='white' strokeWidth='8' strokeLinecap='round' strokeLinejoin='round'/>
-						<path d='M 32 20 v 20' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin="round"/>
+						<path d='M 32 20 v 20' stroke='black' strokeWidth='6' fill='none' strokeLinecap='round' strokeLinejoin='round'/>
 						<circle cx='32' cy='54' r='3' fill='black'/>
 					</mask>
 				</defs>

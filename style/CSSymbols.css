@@ -10,14 +10,24 @@
 	stroke: currentColor;
 }
 
+.Symbol.Settings:hover {
+	animation: SettingsRotate infinite 2s ease-in-out;
+}
+
 .Symbol.Loading {
-	animation: LoadingRotate infinite 3s ease-in-out;
+	animation: LoadingRotate infinite 2s ease-in-out;
 }
 
 @keyframes LoadingRotate {
-	0% {transform: rotate(0deg);}
-	25% {transform: rotate(180deg);}
-	50% {transform: rotate(180deg);}
-	75% {transform: rotate(360deg);}
-	100% {transform: rotate(360deg);}
+	/* Symmetric every 180 degrees */
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(180deg); }
+	100% { transform: rotate(180deg); }
+}
+
+@keyframes SettingsRotate {
+	/* Symmetric every 45 degrees */
+	0% { transform: rotate(0deg); }
+	33% { transform: rotate(45deg); }
+	100% { transform: rotate(45deg); }
 }
