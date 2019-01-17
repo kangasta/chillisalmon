@@ -9,37 +9,51 @@ class CSChanger extends Component {
 
 		this.state = {
 			active: props.active,
-			isChanging: true
+			isChanging: true,
 		};
 	}
 
 	componentDidMount() {
-		setTimeout(()=>{
+		clearTimeout(this.state.fadeInTimeout);
+		const fadeInTimeout = setTimeout(()=>{
 			this.setState({
 				isChanging: false
 			});
 		},50);
+		this.setState({fadeInTimeout: fadeInTimeout});
 	}
 
 	componentDidUpdate(prevProps) {
 		if (this.props.active === prevProps.active) return;
 		if (this.props.active === this.state.active) return;
 
+		clearTimeout(this.state.fadeInTimeout);
+		clearTimeout(this.state.fadeOutTimeout);
+		var fadeOutTimeout;
 		// Hide current item
 		this.setState({isChanging: true},()=>{
 			// Change active element after 250ms
-			setTimeout(()=>{
+			fadeOutTimeout = setTimeout(()=>{
 				this.setState({
 					active: this.props.active
 				});
 			},250);
 		});
 		// Show next item after 300 ms
-		setTimeout(()=>{
+		const fadeInTimeout = setTimeout(()=>{
 			this.setState({
 				isChanging: false
 			});
 		},300);
+		this.setState({
+			fadeInTimeout: fadeInTimeout,
+			fadeOutTimeout: fadeOutTimeout
+		});
+	}
+
+	componentWillUnmount() {
+		clearTimeout(this.state.fadeInTimeout);
+		clearTimeout(this.state.fadeOutTimeout);
 	}
 
 	getActiveClass(i) {

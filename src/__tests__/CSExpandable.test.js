@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import { CSExpandable } from '../ChilliSalmon';
 
-describe('CSChanger', () => {
+describe('CSExpandable', () => {
 	it('renders without crashing', () => {
 		mount(
 			<CSExpandable>
