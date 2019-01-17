@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { CSChanger } from '../ChilliSalmon';
+import { CSChanger, CSStatus } from '../ChilliSalmon';
+
+const anyToString = any => {
+	try {
+		return any.toString();
+	} catch(e) {
+		return '';
+	}
+};
 
 class CSValidatorChanger extends Component {
 	getActive() {
@@ -10,22 +18,11 @@ class CSValidatorChanger extends Component {
 		return 2;
 	}
 
-	getStatusComponent(type) {
-		const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-
-		return (
-			<div className={capitalize(type)}>
-				<h1>{capitalize(type)}</h1>
-				<p>{this.props[type.toLowerCase()]}</p>
-			</div>
-		);
-	}
-
 	render() {
 		return (
 			<CSChanger active={this.getActive()}>
-				{this.getStatusComponent('error')}
-				{this.getStatusComponent('loading')}
+				<CSStatus status={CSStatus.status.ERROR} message={anyToString(this.props.error)} no_icon={this.props.no_icon}/>
+				<CSStatus status={CSStatus.status.LOADING} message={anyToString(this.props.loading)} no_icon={this.props.no_icon}/>
 				{this.props.children}
 			</CSChanger>
 		);
@@ -33,14 +30,13 @@ class CSValidatorChanger extends Component {
 }
 
 CSValidatorChanger.defaultProps = {
-	loading: undefined,
-	error: undefined
 };
 
 CSValidatorChanger.propTypes = {
-	loading: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-	error: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-	children:	PropTypes.node
+	loading:	PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+	error:		PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+	children:	PropTypes.node,
+	no_icon:	PropTypes.bool
 };
 
 export default CSValidatorChanger;
