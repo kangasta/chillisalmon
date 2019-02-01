@@ -3,6 +3,7 @@ import './App.css';
 
 import {
 	/*CSIntervalChanger,*/
+	CSClock,
 	CSExpandable,
 	CSSymbols
 } from 'chillisalmon';
@@ -17,6 +18,10 @@ class App extends Component {
 				</div>
 				<h2>Expandable</h2>
 				<CSExpandable>Content</CSExpandable>
+				<h2>Time</h2>
+				<div className='Clock'>
+					<CSClock/>
+				</div>
 			</div>
 		);
 	}
