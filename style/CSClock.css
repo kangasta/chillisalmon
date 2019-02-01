@@ -1,0 +1,20 @@
+.CSClock {
+	stroke-linecap: round;
+	stroke-width: 2px;
+}
+
+.CSClock .Hour {
+	stroke-width: 4px;
+}
+
+.CSClock .Minute {
+	stroke-width: 4px;
+}
+
+.CSClock .Sixtieth {
+	stroke-width: 1px;
+}
+
+.CSClock .Circle {
+	stroke: none;
+}
