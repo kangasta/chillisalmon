@@ -3,6 +3,7 @@ import './App.css';
 
 import {
 	/*CSIntervalChanger,*/
+	CSCalendar,
 	CSClock,
 	CSExpandable,
 	CSSymbols
@@ -22,6 +23,7 @@ class App extends Component {
 				<div className='Clock'>
 					<CSClock/>
 				</div>
+				<CSCalendar/>
 			</div>
 		);
 	}
