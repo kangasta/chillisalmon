@@ -15,11 +15,11 @@ class CSCalendar extends Component {
 				date: props.date
 			};
 		} else {
-			this.state = this.getDate();
+			this.state = this.getDateState();
 		}
 	}
 
-	getDate() {
+	getDateState() {
 		const date = new Date();
 		return {
 			date: date
@@ -27,19 +27,47 @@ class CSCalendar extends Component {
 	}
 
 	getFirstDayColumn() {
-		const weekday = (new Date(
+		return CSCalendar.jsToIsoWeekday((new Date(
 			this.state.date.getFullYear(),
 			this.state.date.getMonth(),
 			1
-		)).getDay() - 1;
-		return weekday < 0 ? 6 : weekday;
+		)).getDay());
+	}
+
+	static jsToIsoWeekday(jsWeekday) {
+		return (jsWeekday - 1) < 0 ? 6 : (jsWeekday - 1);
+	}
+
+	static getIsoWeekOfYear(date, yearOffset=0) {
+		const baseYear = date.getFullYear() + yearOffset;
+
+		const firstDayOfYear = new Date(Date.UTC(baseYear, 0, 1));
+		const firstWeekdayOfYear = CSCalendar.jsToIsoWeekday((firstDayOfYear.getDay()));
+		const mondayOfFirstWeekOfYear = firstWeekdayOfYear <= 3
+			? new Date(Date.UTC(baseYear, 0, -firstWeekdayOfYear))
+			: new Date(Date.UTC(baseYear, 0, 7 - firstWeekdayOfYear));
+
+		const today = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+
+		const weeknum = Math.ceil((today - mondayOfFirstWeekOfYear) / 1000 / 3600 / 24 / 7);
+
+		return weeknum > 0 ? weeknum : CSCalendar.getIsoWeekOfYear(date, -1);
+	}
+
+	static isToday(date) {
+		const today = new Date();
+		return (
+			date.getFullYear() === today.getFullYear() &&
+			date.getMonth() === today.getMonth() &&
+			date.getDate() === today.getDate()
+		);
 	}
 
 	componentDidMount() {
 		if (this.props.updateInterval) {
 			this.setState({
 				updateId: setInterval(() => {
-					this.setState(this.getDate());
+					this.setState(this.getDateState());
 				}, this.props.updateInterval)
 			});
 		}
@@ -60,7 +88,7 @@ class CSCalendar extends Component {
 						<th colSpan='8' className='Title'>{today.toLocaleString(this.props.locale, this.month_print)}</th>
 					</tr>
 					<tr>
-						<th className='Weekday'></th>
+						<th className='WeekNumber'>{this.props.weekTitle}</th>
 						{dates.slice(0,7).map(date => (
 							<th key={date} className='Weekday'>{date.toLocaleString(this.props.locale, this.weekday_print)}</th>
 						))}
@@ -69,9 +97,9 @@ class CSCalendar extends Component {
 				<tbody>
 					{[...Array(6).keys()].map(i => (
 						<tr key={i}>
-							<td key='weeknum' className='WeekNumber'></td>
+							<td key='weeknum' className='WeekNumber'>{CSCalendar.getIsoWeekOfYear(dates[i * 7])}</td>
 							{dates.slice(i * 7, (i + 1) * 7).map(day => (
-								<td key={day} className='Date'>{day.getDate()}</td>
+								<td key={day} className={'Date' + (CSCalendar.isToday(day) ? ' Today' : '')}>{day.getDate()}</td>
 							))}
 						</tr>
 					))}
@@ -85,7 +113,7 @@ CSCalendar.defaultProps = {
 	className: '',
 	locale: 'en-US',
 	updateInterval: 3600e3,
-	weekTitle: 'Wk'
+	weekTitle: 'Week'
 };
 
 CSCalendar.propTypes = {
