@@ -11,8 +11,7 @@
 .app {
 	left: 50%;
 	position: absolute;
-	top: 50%;
-	transform: translate(-50%,-50%);
+	transform: translateX(-50%);
 }
 
 span.Symbol {
@@ -21,4 +20,34 @@ span.Symbol {
 
 .Clock {
 	font-size: 4em;
+}
+
+.CSCalendar {
+	border-radius: 0.06125em;
+	overflow: hidden;
+	font-size: 4em
+}
+
+.CSCalendar th,.CSCalendar td {
+	background-color: black;
+	color: white;
+	font-size: 0.1em;
+	padding: 0.125em 0.25em;
+	text-align: right;
+}
+
+.CSCalendar th.Title, .CSCalendar th.Weekday {
+	text-align: center;
+}
+
+.CSCalendar th.WeekNumber {
+	font-size: 0.075em;
+}
+
+.CSCalendar td.WeekNumber {
+	text-align: center;
+}
+
+.CSCalendar td.Today {
+	background-color: red;
 }
