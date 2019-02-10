@@ -1,0 +1,9 @@
+input.CSColorSlider {
+	appearance: none;
+	box-sizing: border-box;
+	border: thin solid white;
+	border-radius: 0.33em;
+	height: 1em;
+	margin: 0 5%;
+	width: 90%;
+}

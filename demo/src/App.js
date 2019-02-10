@@ -5,6 +5,7 @@ import {
 	/*CSIntervalChanger,*/
 	CSCalendar,
 	CSClock,
+	CSColorPicker,
 	CSExpandable,
 	CSSymbols
 } from 'chillisalmon';
@@ -24,6 +25,11 @@ class App extends Component {
 					<CSClock/>
 				</div>
 				<CSCalendar/>
+				<h2>Pickers</h2>
+				<h3>RGB</h3>
+				<CSColorPicker/>
+				<h3>HSL</h3>
+				<CSColorPicker initialColor={{H: 0,S: 0, L: 50}}/>
 			</div>
 		);
 	}
