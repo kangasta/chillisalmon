@@ -14,7 +14,6 @@ class CSChanger extends Component {
 	}
 
 	componentDidMount() {
-		clearTimeout(this.state.fadeInTimeout);
 		const fadeInTimeout = setTimeout(()=>{
 			this.setState({
 				isChanging: false
