@@ -22,9 +22,9 @@ class CSValidatorChanger extends Component {
 	render() {
 		return (
 			<CSChanger active={this.getActive()}>
-				<CSStatus status={CSStatus.status.ERROR} message={anyToString(this.props.error)} no_icon={this.props.no_icon}/>
-				<CSStatus status={CSStatus.status.LOADING} message={anyToString(this.props.loading)} no_icon={this.props.no_icon}/>
-				<CSStatus status={CSStatus.status.SUCCESS} message={anyToString(this.props.success)} no_icon={this.props.no_icon}/>
+				<CSStatus className={this.props.statusClass} status={CSStatus.status.ERROR} message={anyToString(this.props.error)} no_icon={this.props.no_icon}/>
+				<CSStatus className={this.props.statusClass} status={CSStatus.status.LOADING} message={anyToString(this.props.loading)} no_icon={this.props.no_icon}/>
+				<CSStatus className={this.props.statusClass} status={CSStatus.status.SUCCESS} message={anyToString(this.props.success)} no_icon={this.props.no_icon}/>
 				{this.props.children}
 			</CSChanger>
 		);
@@ -32,14 +32,16 @@ class CSValidatorChanger extends Component {
 }
 
 CSValidatorChanger.defaultProps = {
+	statusClass:	'',
 };
 
 CSValidatorChanger.propTypes = {
-	loading:	PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-	error:		PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-	success:	PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-	children:	PropTypes.node,
-	no_icon:	PropTypes.bool
+	loading:		PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+	error:			PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+	success:		PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+	statusClass:	PropTypes.string,
+	children:		PropTypes.node,
+	no_icon:		PropTypes.bool
 };
 
 export default CSValidatorChanger;
