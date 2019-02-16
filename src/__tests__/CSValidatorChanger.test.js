@@ -36,4 +36,8 @@ describe('CSValidatorChanger', () => {
 		expect(wrapper.find('.cs-changer-item-active')).toHaveLength(1);
 		expect(wrapper.find('.cs-changer-item-active').exists('.Test.Child')).toBe(true);
 	});
+	it('allows adding custom class to status components', () => {
+		const wrapper = mount(<CSValidatorChanger statusClass='TestClass' error='Test Error'><div/></CSValidatorChanger>);
+		expect(wrapper.exists('.cs-changer-item-active .Error.TestClass')).toBe(true);
+	});
 });
