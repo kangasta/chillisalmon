@@ -8,7 +8,9 @@ class CSStatus extends Component {
 		return {
 			ERROR: 0,
 			LOADING: 1,
-			SUCCESS: 2
+			SUCCESS: 2,
+			WARNING: 3,
+			MESSAGE: 4
 		};
 	}
 
@@ -16,7 +18,9 @@ class CSStatus extends Component {
 		return [
 			'Error',
 			'Loading',
-			'Success'
+			'Success',
+			'Warning',
+			'Message'
 		];
 	}
 
@@ -32,6 +36,10 @@ class CSStatus extends Component {
 			return CSSymbols.Loading;
 		case CSStatus.status.SUCCESS:
 			return CSSymbols.Success;
+		case CSStatus.status.WARNING:
+			return CSSymbols.Warning;
+		case CSStatus.status.MESSAGE:
+			return CSSymbols.Message;
 		default:
 			return null;
 		}
