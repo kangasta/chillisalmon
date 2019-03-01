@@ -7,6 +7,7 @@ import CSIntervalChanger from './changers/CSIntervalChanger';
 import CSStatus from './components/CSStatus';
 import CSSymbols from './misc/CSSymbols';
 import CSTimeChanger from './changers/CSTimeChanger';
+import CSUtils from './misc/CSUtils';
 import CSValidatorChanger from './changers/CSValidatorChanger';
 
 export {
@@ -19,5 +20,6 @@ export {
 	CSStatus,
 	CSSymbols,
 	CSTimeChanger,
+	CSUtils,
 	CSValidatorChanger,
 };
