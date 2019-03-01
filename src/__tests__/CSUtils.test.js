@@ -1,5 +1,16 @@
 import { CSUtils } from '../ChilliSalmon';
 
+describe('CSUtils.anyToString', () => {
+	it('converts valid inputs to string', () => {
+		expect(CSUtils.anyToString(123)).toEqual('123');
+	});
+	it('does not crash on invalid inputs', () => {
+		[null, undefined].forEach(i => {
+			expect(CSUtils.anyToString(i)).toEqual('');
+		});
+	});
+});
+
 describe('CSUtils.capitalize', () => {
 	it('capitalizes the input string', () => {
 		expect(CSUtils.capitalize('asd')).toEqual('Asd');
@@ -30,13 +41,27 @@ describe('CSUtils.checkJsonForErrors', () => {
 	});
 });
 
-describe('CSUtils.anyToString', () => {
-	it('converts valid inputs to string', () => {
-		expect(CSUtils.anyToString(123)).toEqual('123');
+describe('CSUtils.makeCanceable', () => {
+	it('allows canceling of promise', () => {
+		const canceable = CSUtils.makeCancelable(new Promise(resolve => setTimeout(resolve, 1)));
+		const then_cb = jest.fn();
+
+		canceable.cancel();
+		jest.runOnlyPendingTimers();
+
+		return canceable.promise.then(then_cb).catch(() => {
+			expect(then_cb).not.toHaveBeenCalled();
+		});
 	});
-	it('does not crash on invalid inputs', () => {
-		[null, undefined].forEach(i => {
-			expect(CSUtils.anyToString(i)).toEqual('');
+	it('acts as a promise if not canceled', () => {
+		const canceable = CSUtils.makeCancelable(new Promise(resolve => setTimeout(resolve, 1)));
+		const then_cb = jest.fn();
+
+		canceable.promise.then(then_cb);
+		jest.runOnlyPendingTimers();
+
+		return canceable.promise.then(then_cb).then(() => {
+			expect(then_cb).toHaveBeenCalled();
 		});
 	});
 });
