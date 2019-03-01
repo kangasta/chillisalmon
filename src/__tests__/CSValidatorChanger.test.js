@@ -3,8 +3,6 @@ import { mount } from 'enzyme';
 
 import { CSValidatorChanger } from '../ChilliSalmon';
 
-jest.useFakeTimers();
-
 describe('CSValidatorChanger', () => {
 	it('renders without crashing', () => {
 		mount(
