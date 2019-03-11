@@ -1,4 +1,8 @@
 class CSUtils {
+	static _sToSpaces(str_in) {
+		return CSUtils.anyToString(str_in).replace(/_/g, ' ');
+	}
+
 	static anyToString(any) {
 		try {
 			return any.toString();

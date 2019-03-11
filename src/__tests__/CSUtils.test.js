@@ -1,5 +1,15 @@
 import { CSUtils } from '../ChilliSalmon';
 
+describe('CSUtils._sToSpaces', () => {
+	it('converts underscores to spaces', () => {
+		expect(CSUtils._sToSpaces('Hello_underscore!')).toEqual('Hello underscore!');
+		expect(CSUtils._sToSpaces('m_u_l_t_i')).toEqual('m u l t i');
+	});
+	it('does no throw on invalid input', () => {
+		[null, undefined, 123].forEach(CSUtils._sToSpaces);
+	});
+});
+
 describe('CSUtils.anyToString', () => {
 	it('converts valid inputs to string', () => {
 		expect(CSUtils.anyToString(123)).toEqual('123');
